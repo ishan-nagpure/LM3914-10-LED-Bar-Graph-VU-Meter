@@ -1,0 +1,16 @@
+Ref,Qty,Value,Description,Notes
+U1,1,LM3914N,Dot/bar display driver (18-pin DIP),Same pinout as LM3915 (log scale) and LM3916 (VU scale)
+LED1-LED10,10,5mm LED,Any colour,Long leg = anode (+); all anodes go to +9V
+R1,1,1.43k ohm,Sets LED current (about 8.7 mA),Build from 1k + 330 + 100 ohm in series
+R2,1,100k ohm,Bleed resistor from SIG (Pin 5) to GND,22k to 470k also works
+RV1,1,10k ohm potentiometer,Input level / sensitivity,Linear or log taper
+D1,1,1N4148,Half-wave rectifier,Optional upgrade: 1N5819 (Schottky) or 1N34A (germanium) for more sensitivity
+C1,1,0.1uF ceramic,Supply bypass,Place close to Pins 2 and 3
+C2,1,1uF,Peak smoothing on SIG (Pin 5),0.47uF to 4.7uF works; if electrolytic the + leg goes to Pin 5
+J1,1,3.5mm audio jack breakout,Audio input,Tip = left channel; Ring unused; Sleeve = GND
+BT1,1,9V battery + clip,Power,All 10 LEDs on draws about 87 mA
+-,1,Breadboard,Solderless breadboard,830 points recommended
+-,1,Jumper wires,Assorted,
+OPT-Rf,1,2k to 4.7k ohm,Optional low-pass filter series resistor,See docs/filters-and-tuning.md
+OPT-Cf,1,0.1uF,Optional low-pass filter capacitor,See docs/filters-and-tuning.md
+OPT-C3,1,10uF electrolytic,Optional extra supply decoupling,+ leg to +9V
